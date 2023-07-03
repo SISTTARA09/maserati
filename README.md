@@ -1,1 +1,1 @@
-<a href="https://sisttar09.github.io/maserati/">Demo</a>.
+<a href="https://sisttara09.github.io/maserati/" target="_blank">Demo</a>.
