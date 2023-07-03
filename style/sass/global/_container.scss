@@ -1,0 +1,36 @@
+$x-largeDevices: 'width >= 1200px';
+$largeDevices: 'width < 1200px';
+$mediumDevices: 'width < 800px';
+$smallDevices: 'width < 500px';
+/* Extra large devices*/
+@media ($x-largeDevices) {
+  .container {
+    width: 70vw;
+    margin: auto;
+  }
+}
+
+/* Large devices*/
+@media ($largeDevices) {
+  .container {
+    width: 85vw;
+    margin: auto;
+  }
+}
+
+/* Medium devices */
+@media ($mediumDevices) {
+  .container {
+    width: 90vw;
+    margin: auto;
+  }
+}
+
+/* Small devices */
+@media ($smallDevices) {
+  .container {
+      width: 100%;
+      margin: auto;
+    }
+  }
+  

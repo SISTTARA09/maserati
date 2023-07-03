@@ -1,0 +1,76 @@
+@use "../helpers" as *;
+@use "../global" as *;
+@use "../mixin" as *;
+
+section.sport {
+	padding: {
+		top: 2rem;
+		bottom: 2rem;
+	}
+	> h1 {
+		color: $blue;
+		border-bottom: 2px solid $blue;
+		margin: auto;
+		width: fit-content;
+		margin-bottom: $l;
+	}
+	.container {
+		@include flex(column);
+		.boxes {
+			@include flex(column);
+			gap: 2rem;
+			article.box {
+				@include flex(row);
+				position: relative;
+				flex: 0 1 45%;
+				gap: 1rem;
+				&:not(:first-child)::before {
+					content: "";
+					position: absolute;
+					width: 20px;
+					height: 20px;
+					background-color: $lred;
+					top: -20px;
+					left: 50%;
+					transform: translateX(-50%);
+					border-radius: 50%;
+				}
+				.info {
+					h2 {
+						position: relative;
+						color: $blue;
+						font-size: 1.25rem;
+						margin-bottom: $m;
+						width: fit-content;
+						&::after {
+							content: "";
+							position: absolute;
+							right: -20px;
+							top: 50%;
+							transform: translateY(-50%);
+							border: 10px solid $blue;
+							border-left-color: transparent;
+							border-top-color: transparent;
+							border-bottom-color: transparent;
+						}
+					}
+					.description {
+						text-align: justify;
+						font-size: $medium;
+						line-height: 1.6;
+						color: $pColor;
+						padding: $s;
+						@media ($mediumDevices) {
+							font-size: $medium;
+						}
+						img {
+							height: 130px;
+							float: left;
+							margin-right: 1rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}

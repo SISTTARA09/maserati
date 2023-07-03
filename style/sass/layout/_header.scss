@@ -1,0 +1,45 @@
+@use "../helpers" as *;
+@use "../mixin" as *;
+@use "../global" as *;
+header {
+	padding: $m;
+	height: 72px;
+	.container {
+		@include flex("row");
+		align-items: center;
+		justify-content: space-between;
+		height: 100%;
+		border-bottom: 1px solid $blue;
+		.logo {
+			img {
+				width: 80px;
+				transform: translateX(-20%);
+			}
+		}
+		.logo ~ nav {
+			height: 100%;
+			ul {
+				@include flex(row);
+				position: relative;
+				align-items: center;
+				height: 100%;
+				gap: 10px;
+			}
+			li {
+				@include flex(row);
+				@include f-center;
+				flex: 0 1 25%;
+				padding: $s;
+				transition: 0.2s linear;
+				cursor: pointer;
+			}
+			a {
+				position: relative;
+				font-size: 17px;
+				color: $blue;
+				font-weight: $bold;
+				text-transform: capitalize;
+			}
+		}
+	}
+}

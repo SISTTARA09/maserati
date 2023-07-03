@@ -1,0 +1,81 @@
+@use '../helpers' as *;
+@use '../global' as *;
+@use '../mixin' as *;
+
+.cars {
+  margin-top: $l;
+  padding: 50px 0;
+  background-color: $bcg;
+  .container {
+    @include flex(column);
+    @include f-center;
+    h1 {
+      color: $blue;
+      border-bottom: 2px solid $blue;
+      margin-bottom: 20px;
+    }
+    .boxes {
+      @include flex(row);
+      @include f-center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      row-gap: 3rem;
+      > .box {
+        position: relative;
+        flex: 0 0 31%;
+        box-shadow: 0 0 5px 1px #fff;
+        height: 350px;
+        &::after {
+          content: '2023';
+          position: absolute;
+          right: 3px;
+          bottom: 0;
+          font: {
+            weight: $bold;
+          }
+          color: $lred;
+        }
+        @media ($mediumDevices) {
+          flex: 0 1 45%;
+          height: 320px;
+        }
+        @media ($smallDevices) {
+          flex: 0 1 70%;
+        }
+        .image {
+          width: 100%;
+          overflow: hidden;
+          // border-radius: .3rem;
+          img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            // border-top-left-radius: .3rem ;
+            // border-top-right-radius: .3rem ;
+            transition: transform .2s linear;
+            @media ($mediumDevices) {
+              height: 150px;
+            }
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+        .info {
+          padding: .5rem .7rem .7rem;
+          h3 {
+            color: $blue;
+            margin-bottom: $m;
+            text-transform: capitalize;
+          }
+          p {
+            font-size: 15px;
+            padding: $s 0;
+            color: $pColor;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@use "../helpers" as *;
+@use "../global" as *;
+@use "../mixin" as *;
+
+section.history {
+  padding: $l;
+	.container {
+    @include flex(column);
+		@include f-center;
+		gap: $l;
+    border-radius: .5rem;
+		h1 {
+			color: $blue;
+			position: relative;
+			padding: $s;
+			margin-top: $l;
+      border-bottom: 2px solid $blue;
+		}
+		.branch {
+			@include flex(column);
+			align-items: flex-start;
+      padding: $m;
+      border-radius: $m;
+      h3 {
+        color: $blue;
+        margin-left: $l;
+        position: relative;
+        padding: $m;
+        &::before {
+          content: '';
+          position: absolute;
+          left: -5px;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 0px;
+          height: 0px;
+          background-color: transparent;
+          border: 7px solid $blue;
+          border-right-color: transparent;
+          border-top-color: transparent;
+          border-bottom-color: transparent;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          right: -1px;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: $blue;
+          width: 2.5px;
+          height: 60%;
+        }
+      }
+      p {
+        text-transform: capitalize;
+        text-align:justify ;
+        line-height: 1.45;
+        color: $pColor;
+      }
+		}
+	}
+}

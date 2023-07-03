@@ -1,0 +1,88 @@
+@use "../global" as *;
+@use "../helpers" as *;
+@use "../mixin" as *;
+.contact {
+	background-color: $bcg;
+	padding: 30px 30px 60px;
+	@include flex(column);
+	h1 {
+		color: $blue;
+		border-bottom: 2px solid $blue;
+		margin: 0 auto 30px;
+	}
+	.parent {
+		@include flex(row);
+		align-items: center;
+		border: 2px solid black;
+		height: fit-content;
+		.image {
+			flex: 0 1 45%;
+			img {
+				max-width: 600px;
+				display: block;
+				@media ($largeDevices) {
+					max-width: 400px;
+				}
+				@media ($mediumDevices) {
+					display: none;
+				}
+			}
+			@media ($mediumDevices) {
+				display: none;
+			}
+		}
+		.form {
+			flex: 0 1 45%;
+			form {
+				position: relative;
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: center;
+				column-gap: 0.5rem;
+				row-gap: 1rem;
+				input {
+					flex: 0 1 40%;
+					padding: $m;
+					border: 2px solid $black;
+					&.description {
+						position: relative;
+						flex: 0 1 81%;
+						padding: $m $m 100px;
+					}
+					&[type="submit"] {
+						position: absolute;
+						bottom: -45px;
+						right: 60px;
+						background-color: $black;
+						color: white;
+						cursor: pointer;
+						width: 100px;
+						height: 40px;
+						padding: $s;
+						font-weight: $bold;
+						align-self: flex-end;
+					}
+					@media ($smallDevices) {
+						flex: 0 1 80%;
+					}
+				}
+				@media ($largeDevices) {
+					row-gap: 0.5rem;
+				}
+				@media ($smallDevices) {
+					column-gap: 0.1rem;
+				}
+			}
+			@media ($largeDevices) {
+				flex: 40%;
+			}
+		}
+		@media ($largeDevices) {
+			width: 100%;
+			justify-content: center;
+		}
+		@media ($mediumDevices) {
+			border: none;
+		}
+	}
+}

@@ -1,0 +1,30 @@
+@use "../helpers" as *;
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+	font: {
+		family: $s-serif;
+		size: $medium;
+		weight: $normal;
+	}
+	// width: 100%;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+	color: black;
+}
+input {
+  outline: none;
+}
+h1 {
+	font-size: 30px;
+}
