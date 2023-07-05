@@ -59,6 +59,28 @@ h1 {
     margin: auto;
   }
 }
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #eee;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1177ee;
+  border-radius: 0.3rem;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #1177ee #eee;
+}
+
 header {
   padding: 0.5rem;
   height: 72px;
