@@ -1,0 +1,37 @@
+[
+	{
+		"title": "Ghibli",
+		"description": "Ghibli is powered by a twin-turbo3.0-liter V-6 engine with rear-wheel drive, which produces 345horsepower",
+		"imgSrc": "./images/ghibli.jpg"
+	},
+	{
+		"title": "quatroporte",
+		"description": "Quattroporte offers two excitingFerrari-derived engines. The base engine is a V6, or there’s anoptional V8, and they’re both turbocharged.",
+		"imgSrc": "./images/quatroporte.jpg"
+	},
+	{
+		"title": "levante",
+		"description": "Under the hood of most Levante models isa twin-turbocharged V-6 routing its 350 horsepower—or 430 horsesin the Modena—to all four wheels through an eight-speedautomatic.",
+		"imgSrc": "./images/levante.jpg"
+	},
+	{
+		"title": "granturismo",
+		"description": "The GranTurismo gets a detuned versionof the MC20 sports car's twin-turbo V-6 engine. The entry-levelModena trim makes 483 horsepower but upgrading to the Trofeoboosts power to 542 ponies.",
+		"imgSrc": "./images/granturismo.jpg"
+	},
+	{
+		"title": "grecale",
+		"description": "The Grecale is powered by a turbocharged2.0-liter four-cylinder engine that is paired with aneight-speed automatic transmission and all-wheel drive. In theGT, the engine makes 296 horsepower.",
+		"imgSrc": "./images/grecale.jpg"
+	},
+	{
+		"title": "mc20",
+		"description": "The MC20 powered by a twin-turbochargedV-6 engine that pumps out 621 hp. Called Nettuno, the engineutilizes a unique twin-combustion system borrowed from Formula 1race cars.",
+		"imgSrc": "./images/mc20.jpg"
+	},
+	{
+		"title": "cielo",
+		"description": "The MC20 powered by a twin-turbochargedV-6 engine that pumps out 621 hp. Called Nettuno, the engineutilizes a unique twin-combustion system borrowed from Formula 1race cars.",
+		"imgSrc": "./images/cielo.jpg"
+	}
+]
